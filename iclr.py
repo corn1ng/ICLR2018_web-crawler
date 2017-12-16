@@ -34,7 +34,7 @@ def parse_specify_content(URL, headers):
     except ZeroDivisionError:
         avgscore = 0
     avg_score = ('%.2f' % avgscore)
-    title = (answer['notes'][0]['forumContent']['title'])
+    title = answer['notes'][0]['forumContent']['title']
     return title, avg_score
 
 
