@@ -33,6 +33,7 @@ class Product(threading.Thread):
             for i in urllist:
                 ids = parsejson(i, headers=head)
                 for i in ids:
+                    print(i)
                     self.queue.put(i)
 
 
@@ -54,6 +55,7 @@ class Consumer(threading.Thread):
             t,s = parse_specify_content(URL, header)
             title.append(t)
             avg_score.append(s)
+            print(t,s)
 
 
 
